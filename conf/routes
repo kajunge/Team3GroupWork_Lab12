@@ -5,7 +5,7 @@
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
 GET     /welcome/:name/:lastName    controllers.HomeController.welcome(name: String, lastName: String)
-
+GET     /about                      controllers.HomeController.about
 GET     /orders                     controllers.OrdersController.index
 GET     /orders/create              controllers.OrdersController.createOrder()
 GET     /orders/:id                 controllers.OrdersController.showOrder(id : Integer)

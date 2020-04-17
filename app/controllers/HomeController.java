@@ -23,7 +23,12 @@ public class HomeController extends Controller {
     }
 
     public Result welcome(String name, String lastName){
+
         return ok(welcome.render(name,lastName));
+    }
+
+    public Result about(){
+        return ok(views.html.Home.about.render());
     }
 
 }
