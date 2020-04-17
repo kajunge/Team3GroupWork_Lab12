@@ -6,10 +6,8 @@ import play.data.FormFactory;
 import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.Orders.index;
-import views.html.Orders.show;
 
 import javax.inject.Inject;
-import javax.swing.text.AbstractDocument;
 import java.util.Set;
 
 /**
@@ -68,7 +66,7 @@ public class OrdersController extends Controller {
         if(order == null){
             return notFound("Sorry, but the order ID does not exist.");
         }
-        return null;
-       //return ok(showOrder.render());
+       // return null;
+       return ok();
     }
 }
