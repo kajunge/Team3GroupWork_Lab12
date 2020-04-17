@@ -1,0 +1,23 @@
+@(orders : Set[Order])
+
+<html>
+  <head>
+      <title>All Orders</title>
+  </head>
+    <body>
+
+        <h1> All Orders</h1>
+
+        @for(order <- orders){
+
+        <a href=@routes.OrdersController.showOrder(order.id)>@order.id</a>
+        <p>Order ID: @order.id</p>
+        <p>Sender ID: @order.senderID</p>
+        <p>Sender: @order.senderFirstName @order.senderLastName</p>
+        <p>Recipient ID: @order.recipientID</p>
+        <p>Recipient: @order.recipientFirstName @order.recipientLastName</p>
+        <p>Transaction Amount: $@order.transactionAmount</p>
+        }
+    </body>
+
+</html>
