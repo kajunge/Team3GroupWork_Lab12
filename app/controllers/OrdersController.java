@@ -64,11 +64,11 @@ public class OrdersController extends Controller {
 
     //shows order details
     public Result showOrder(Integer id){
-        Order order = Order.bookID(id);
+        Order order = Order.orderID(id);
         if(order == null){
             return notFound("Sorry, but the order ID does not exist.");
         }
         return null;
-      //  return ok(showOrder.render(order));
+       // return ok(showOrder.render(order));
     }
 }
