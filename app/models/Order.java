@@ -16,6 +16,10 @@ public class Order {
     public Integer recipientID;
     public Double transactionAmount;
 
+    public Order(){
+
+    }
+
     public Order(Integer id, String senderLastName, String senderFirstName, Integer senderID,
                  String recipientLastName, String recipientFirstName, Integer recipientID,
                  Double transactionAmount){
