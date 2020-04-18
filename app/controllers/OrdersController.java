@@ -7,7 +7,8 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.Orders.index;
 import views.html.Orders.show;
-
+import views.html.Orders.create;
+import play.api.i18n.I18nSupport;
 import javax.inject.Inject;
 import java.util.Set;
 
@@ -30,7 +31,7 @@ public class OrdersController extends Controller {
     public Result createOrder(){
         Form<Order> orderForm = formFactory.form(Order.class);
 
-        return null;
+        return ok(create.render(orderForm));
     }
 
     //saves the order
