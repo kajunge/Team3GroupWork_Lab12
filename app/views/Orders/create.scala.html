@@ -1,6 +1,29 @@
-@(orderForm:Form[Order])
+@(orderForm : Form[Order])
+
+
+<html>
+<head>
+    <title>Create New Order</title>
+</head>
+<body>
+
+<h1>Create New Order</h1>
+@import controllers.OrdersController
+@import controllers.routes
+@import views.html.helper
+
+@helper.form(action = routes.OrdersController.saveOrder()){
 
 
 
+<input type="submit" value="Create Order">
+}
+
+<ul>
+    <li><a href="/">Return Home</a> </li>
+</ul>
+</body>
+
+</html>
 
 
